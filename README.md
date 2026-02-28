@@ -166,50 +166,6 @@ flutter run -d linux
 flutter run -d linux --debug
 ```
 
-## 📖 Usage Guide
-
-### Starting a Recording
-
-1. Launch VRecorder application
-2. Click the **Start** button (green microphone icon)
-3. The timer will begin counting elapsed time
-4. Watch the sound level bar respond to your voice
-
-### Stopping a Recording
-
-1. Click the **Stop** button (red stop icon)
-2. Recording is automatically saved to `~/Music/`
-3. Metadata saved to `~/.local/share/venom/recordings.json`
-4. Recording appears in "Saved Recordings" list
-
-### Playing a Recording
-
-1. In "Saved Recordings" section, find desired recording
-2. Click the **Play** button (green play icon)
-3. Recording opens in default audio player
-
-### Deleting a Recording
-
-1. In "Saved Recordings" section, find recording to delete
-2. Click the **Delete** button (red trash icon)
-3. Confirm deletion
-4. Recording removed from list and file deleted from disk
-
-### Viewing Recording Details
-
-- **Filename** - Auto-generated unique filename with timestamp
-- **Duration** - Total recording length (HH:MM:SS format)
-- **File Size** - Displays in B, KB, or MB format
-- **Creation Date** - When recording was created
-
-## 🔊 Audio Specifications
-
-- **Sample Rate** - 44.1 kHz (CD quality)
-- **Bit Depth** - 16-bit PCM
-- **Channels** - Stereo (2 channels)
-- **Format** - WAV (RIFF)
-- **Codec** - Uncompressed PCM
-- **Bitrate** - ~1.4 Mbps (44.1 kHz × 16-bit × 2 channels)
 
 ## 📁 File Storage
 
