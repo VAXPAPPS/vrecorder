@@ -253,19 +253,30 @@ class _RecorderPageState extends State<RecorderPage> {
   void _showDeleteConfirmation(BuildContext context, String recordingId) {
     showDialog(
       context: context,
-      builder: (context) => AlertDialog(
+      builder: (dialogContext) => AlertDialog(
         backgroundColor: const Color.fromARGB(188, 0, 0, 0),
         title: const Text('Confirm Delete'),
         content: const Text('Are you sure you want to delete this recording?'),
         actions: [
           TextButton(
-            onPressed: () => Navigator.pop(context),
+            onPressed: () => Navigator.pop(dialogContext),
             child: const Text('Cancel'),
           ),
           TextButton(
             onPressed: () {
+              // Send delete event to BLoC
               context.read<AudioBloc>().add(DeleteRecordingEvent(recordingId));
-              Navigator.pop(context);
+              
+              // Close dialog
+              Navigator.pop(dialogContext);
+              
+              // Show success message
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(
+                  content: Text('Recording deleted successfully'),
+                  duration: Duration(seconds: 2),
+                ),
+              );
             },
             child: const Text('Delete', style: TextStyle(color: Colors.red)),
           ),

@@ -99,9 +99,11 @@ class AudioBloc extends Bloc<AudioEvent, AudioState> {
     try {
       final success = await deleteRecordingUseCase(event.recordingId);
       if (success) {
-        emit(RecordingDeleted(event.recordingId));
-        // Reload recordings
-        add(const LoadRecordingsEvent());
+        // Load updated recordings immediately after deletion
+        final recordings = await getRecordingsUseCase();
+        emit(RecordingsLoaded(recordings));
+      } else {
+        emit(AudioError('Failed to delete recording'));
       }
     } catch (e) {
       emit(AudioError('Failed to delete recording: ${e.toString()}'));
