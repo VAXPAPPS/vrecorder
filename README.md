@@ -264,17 +264,10 @@ flutter build linux --verbose
 | `assets/` | Application resources |
 | `pubspec.yaml` | Flutter dependencies |
 
-## 🤝 Contributing
-
-1. Test changes thoroughly on Linux desktop
-2. Maintain Clean Architecture principles
-3. Follow Dart style guidelines
-4. Document any API changes
-5. Update README for new features
 
 ## 📝 License
 
-This project is part of the VAXP Template Suite.
+This project is part of the VAXP organization projects..
 
 ## 👨‍💻 Development
 
@@ -293,13 +286,6 @@ ffi: ^2.1.0
 - libpulse-simple (PulseAudio)
 - C++ Standard Library (C++14)
 
-## 📞 Support
-
-For issues or questions:
-1. Check the Troubleshooting section
-2. Review application logs: Check terminal output
-3. Verify system requirements are met
-4. Consult PulseAudio documentation
 
 ## 🎯 Future Enhancements
 
@@ -323,17 +309,4 @@ Potential features for future versions:
 - **Flutter Version** - 3.38.3
 - **Dart Version** - 3.0+
 
-## ✨ Credits
 
-Built with Flutter and Clean Architecture principles, featuring:
-- VAXP design system
-- Material Design 3
-- Modern glassmorphism UI
-- Professional audio processing
-
----
-
-**VRecorder** - Your Professional Voice Recording Solution
-
-*Last Updated: February 28, 2026*
-# vrecorder
