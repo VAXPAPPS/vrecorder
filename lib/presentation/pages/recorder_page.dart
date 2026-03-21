@@ -89,7 +89,7 @@ class _RecorderPageState extends State<RecorderPage> {
                 child: LinearProgressIndicator(
                   value: level,
                   minHeight: 20,
-                  backgroundColor: Colors.white.withOpacity(0.2),
+                  backgroundColor: Colors.white.withValues(alpha: 0.2),
                   valueColor: AlwaysStoppedAnimation<Color>(
                     _getLevelColor(level),
                   ),
@@ -146,7 +146,7 @@ class _RecorderPageState extends State<RecorderPage> {
               Container(
                 padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
-                  color: Colors.green.withOpacity(0.3),
+                  color: Colors.green.withValues(alpha: 0.3),
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: Text(
@@ -218,7 +218,7 @@ class _RecorderPageState extends State<RecorderPage> {
             Text(
               recording.createdAt.toString().split('.')[0],
               style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                    color: Colors.white.withOpacity(0.6),
+                    color: Colors.white.withValues(alpha: 0.6),
                   ),
             ),
           ],

@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'dart:io';
+import 'package:flutter/foundation.dart';
 import 'package:vrecorder/data/datasources/audio_local_datasource.dart';
 import 'package:vrecorder/domain/entities/recording.dart';
 
@@ -59,7 +60,7 @@ class AudioLocalDataSourceImpl implements AudioLocalDataSource {
           .map((json) => Recording.fromJson(json as Map<String, dynamic>))
           .toList();
     } catch (e) {
-      print('Error loading recordings: $e');
+      debugPrint('Error loading recordings: $e');
       return [];
     }
   }
