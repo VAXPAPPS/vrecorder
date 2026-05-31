@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=vrecorder
+Comment=Flutter Application - vrecorder
+Exec=/usr/bin/vrecorder
+Icon=/usr/share/icons/hicolor/256x256/apps/vrecorder.png
+Terminal=false
+Categories=Utility;Development;
